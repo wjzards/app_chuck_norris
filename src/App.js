@@ -23,7 +23,7 @@ class App extends React.Component {
   handleForm = data => {
     if (data.first_name || data.last_name !== "") {
       fetch(
-        `http://api.icndb.com/jokes/random?firstName=${data.first_name}&lastName=${data.last_name}`
+        `https://api.icndb.com/jokes/random?firstName=${data.first_name}&lastName=${data.last_name}`
       )
         .then(res => res.json())
         .then(json => json.value.joke)
